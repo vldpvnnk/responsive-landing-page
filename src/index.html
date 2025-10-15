@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/scss/main.scss">
 </head>
@@ -19,123 +17,122 @@
         <div class="header__logo"><p>LoremIpsum.</p><p class="header__logo--blue">Net</p></div>
         <nav class="header__nav">
           <ul class="header__nav-list">
-            <li class="header__nav-item">Бизнес</li>
-            <li class="header__nav-item">О нас</li>
-            <li class="header__nav-item">Цены</li>
-            <li class="header__nav-item">Оформить заказ</li>
+            <li class="header__nav-item"><a href="#">Бизнес</a></li>
+            <li class="header__nav-item"><a href="#">О нас</a></li>
+            <li class="header__nav-item"><a href="#">Цены</a></li>
+            <li class="header__nav-item"><a href="#">Оформить заказ</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
 
-  <section class="hero">
-      <div class="hero__content">
-        <div class="hero__label">
-          <p class="hero__label--blue">Lorem ipsum</p>
-          <p> dolor sit </br>amet 
+  <main>
+    <section class="hero">
+        <div class="hero__content">
+          <h1 class="hero__label">
+            <span class="hero__label--blue">Lorem ipsum</span>
+            dolor sit amet 
             consectetur 
-          </p>
-          <p class="hero__label--blue">adipiscing</p>
-        </div>
-        <div class="hero__description">
-          <p class="hero__description--bold">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
-          <p> - Totam rem aperiam eaque ipsa</p>
-          <p> - Sit voluptatem accusantium doloremque laudantium</p>
-          <p> - Sed ut perspiciatis, unde omnis iste natus error</p>
-        </div>
-        <div class="hero__buttons-wrapper">
-          <button class="hero__button">Заказать</button>
-          <button class="hero__button hero__button--white">Подробнее</button>
-        </div>
-      </div>
-  </section>
-
-  <section class="order">
-    <div class="container">
-      <div class="order__content">
-        <div class="order__label-wrapper">
-          <p class="order__label">
-            Оформление <span class="order__label--blue">заказа</span>
-          </p>
-        </div>
-        <p class="order__subtitle">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
-        <div class="order__workflow-diagram">
-          <div class="order__workflow-elem-wrapper">
-            <div class="order__workflow-elem">
-              <img src="./assets/icons/search-icon.svg"/>
-            </div>
-            <p>Lorem ipsum dolor
-              sit </br> amet</p>
-          </div>
-          <div class="order__workflow-elem-wrapper">
-            <div class="order__workflow-elem">
-              <img src="./assets/icons/percent-icon.svg"/>
-            </div>
-            <p>Сonsecteturadipiscing elit</p>
-          </div>
-          <div class="order__workflow-elem-wrapper">
-            <div class="order__workflow-elem">
-              <img src="./assets/icons/file-icon.svg"/>
-            </div>
-            <p>Sed do eiusmod tempor</p>
-          </div>
-          <div class="order__workflow-elem-wrapper">
-            <div class="order__workflow-elem">
-              <img src="./assets/icons/message-icon.svg"/>
-            </div>
-            <p>Esse cillum dolore
-              eu </br> fugiat
-            </p>
-          </div>
-          <div class="order__workflow-elem-wrapper">
-            <div class="order__workflow-elem">
-              <img src="./assets/icons/money-icon.svg"/>
-            </div>
-            <p>Excepteur sint occaecat cupidatat non proident</p>
-          </div>
-
-        </div>
-      </div>
-      <form class="order__form" id="orderForm">
-        <div class="order__inputs">
-          <div class="custom-select">
-            <div class="custom-select__selected">Выберите тип системы</div>
-            <ul class="custom-select__options">
-              <li>Sed ut perspiciatis</li>
-              <li>Nemo enim ipsam</li>
-              <li>Et harum quidem</li>
-              <li>Temporibus autem</li>
-              <li>Itaque earum rerum</li>
-              <li>Temporibus autem</li>
-              <li>Temporibus autem</li>
+            <span class="hero__label--blue">adipiscing</span>
+          </h1>
+          <div class="hero__description">
+            <p class="hero__description--bold">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+            <ul>
+              <li>Totam rem aperiam eaque ipsa</li>
+              <li>Sit voluptatem accusantium doloremque laudantium</li>
+              <li>Sed ut perspiciatis, unde omnis iste natus error</li>
             </ul>
-            <input type="hidden" name="systemType" value="">
           </div>
-          <input type="email" name="email" placeholder="Ваш e-mail" required />
-          <input type="text" name="name" placeholder="Ваше имя" required />
+          <div class="hero__buttons-wrapper">
+            <button class="hero__button">Заказать</button>
+            <button class="hero__button hero__button--white">Подробнее</button>
+          </div>
         </div>
-  
-        <div class="order__slider">
-          <div class="order__slider-label">
-            <label for="progress">Sed ut perspiciatis, unde omnis iste natus</label>             
-            <span id="progressValue">75%</span>
-          </div>
+    </section>
 
-          <div class="order__slider-track">
-            <input type="range" id="progress" name="progress" min="0" max="100" value="75" />
-            <label class="order__file-label">
-              <input type="file" name="file" hidden />
-              <img src="./assets/icons/document-icon.svg"/>
-              <span>Прикрепить файл</span>
-            </label>
+    <section class="order">
+      <div class="container">
+        <div class="order__content">
+          <div class="order__label-wrapper">
+            <h2 class="order__label">
+              Оформление <span class="order__label--blue">заказа</span>
+            </h2>
           </div>
-
+          <p class="order__subtitle">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+          <div class="order__workflow-diagram">
+            <div class="order__workflow-elem-wrapper">
+              <div class="order__workflow-elem">
+                <img src="./assets/icons/search-icon.svg" alt="Иконка поиска"/>
+              </div>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="order__workflow-elem-wrapper">
+              <div class="order__workflow-elem">
+                <img src="./assets/icons/percent-icon.svg" alt="Иконка процентов"/>
+              </div>
+              <p>Сonsecteturadipiscing elit</p>
+            </div>
+            <div class="order__workflow-elem-wrapper">
+              <div class="order__workflow-elem">
+                <img src="./assets/icons/file-icon.svg" alt="Иконка документа"/>
+              </div>
+              <p>Sed do eiusmod tempor</p>
+            </div>
+            <div class="order__workflow-elem-wrapper">
+              <div class="order__workflow-elem">
+                <img src="./assets/icons/message-icon.svg" alt="Иконка сообщения"/>
+              </div>
+              <p>Esse cillum dolore eu fugiat</p>
+            </div>
+            <div class="order__workflow-elem-wrapper">
+              <div class="order__workflow-elem">
+                <img src="./assets/icons/money-icon.svg" alt="Иконка денег"/>
+              </div>
+              <p>Excepteur sint occaecat cupidatat non proident</p>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="order__submit">ОТПРАВИТЬ</button>
-      </form>
-    </div>
-  </section>
+        <form class="order__form" id="orderForm">
+          <div class="order__inputs">
+            <div class="custom-select">
+              <div class="custom-select__selected">Выберите тип системы</div>
+              <ul class="custom-select__options">
+                <li>Sed ut perspiciatis</li>
+                <li>Nemo enim ipsam</li>
+                <li>Et harum quidem</li>
+                <li>Temporibus autem</li>
+                <li>Itaque earum rerum</li>
+                <li>Temporibus autem</li>
+                <li>Temporibus autem</li>
+              </ul>
+              <input type="hidden" name="systemType" value="">
+            </div>
+            <input type="email" name="email" placeholder="Ваш e-mail" required />
+            <input type="text" name="name" placeholder="Ваше имя" required />
+          </div>
+    
+          <div class="order__slider">
+            <div class="order__slider-label">
+              <label for="progress">Sed ut perspiciatis, unde omnis iste natus</label>             
+              <span id="progressValue">75%</span>
+            </div>
+
+            <div class="order__slider-track">
+              <input type="range" id="progress" name="progress" min="0" max="100" value="75" />
+              <label for="fileUpload" class="order__file-label">
+                <input type="file" id="fileUpload" name="file" hidden />
+                <img src="./assets/icons/document-icon.svg" alt="Иконка прикрепления документа"/>
+                <span>Прикрепить файл</span>
+              </label>
+            </div>
+
+          </div>
+          <button type="submit" class="order__submit">ОТПРАВИТЬ</button>
+        </form>
+      </div>
+    </section>
+  </main>
   <footer class="footer">
     <div class="footer__container">
       <span class="footer__span">
@@ -143,25 +140,25 @@
       </span>
       <div class="footer__payment-system">
         <div class="footer__payment-system-elem">
-          <img src="./assets/icons/qiwi-icon.svg"/>
+          <img src="./assets/icons/qiwi-icon.svg" alt="Логотип QIWI wallet"/>
           <span>QIWI wallet</span>
         </div>
         <div class="footer__payment-system-elem">
-          <img src="./assets/icons/yandex-icon.svg"/>
+          <img src="./assets/icons/yandex-icon.svg" alt="Логотип Yandex Money"/>
           <span>Yandex Money</span>
         </div>
         <div class="footer__payment-system-elem">
-          <img src="./assets/icons/web-money-icon.svg"/>
+          <img src="./assets/icons/web-money-icon.svg" alt="Логотип Web Money"/>
           <span>Web Money</span>
         </div>
       </div>
       <div class="footer__contacts">
         <a href="mailto:info@ipsum228.com" class="footer__contacts-elem">
-          <img src="./assets/icons/mail-icon.svg"/>
+          <img src="./assets/icons/mail-icon.svg" alt="Иконка почты"/>
           <span>info@ipsum228.com</span>
         </a>
         <a href="https://vk.com/quisodoratus" class="footer__contacts-elem">
-          <img src="./assets/icons/vk-icon.svg"/>
+          <img src="./assets/icons/vk-icon.svg" alt="Логотип Вконтакте"/>
           <span>Мы вконтакте</span>
         </a>
       </div>

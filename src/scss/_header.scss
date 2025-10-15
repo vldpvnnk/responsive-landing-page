@@ -37,14 +37,18 @@
     }
     
     &__nav-item {
-        color: $color-text-light;
-        transition: color $transition-base;
-        @include mixins.uppercase-text;
-        font-family: $font-main;
-        font-size: 13px;
-        &:hover {
-            color: $color-primary-hover;
-            cursor: pointer;
+        a {
+            color: $color-text-light;
+            text-decoration: none;
+            transition: color $transition-base;
+            @include mixins.uppercase-text;
+            font-family: $font-main;
+            font-size: 13px;
+
+            &:hover {
+                color: $color-primary-hover;
+                cursor: pointer;
+            }
         }
     }
 
