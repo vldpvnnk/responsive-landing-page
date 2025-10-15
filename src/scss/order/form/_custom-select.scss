@@ -1,0 +1,109 @@
+@use '../../variables' as *;
+
+.custom-select {
+    position: relative;
+    width: 370px;
+    font-size: 18px;
+    &__selected {
+      background: $color-text-light;
+      color: $color-text-dark;
+      border: 1px solid $color-border-gray;
+      border-radius: 6px;
+      padding: 12px 16px;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      &:after {
+        content: "";
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 9px;
+        height: 5px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: transform 0.2s;
+        background-image: url("../assets/icons/select-icon.svg");
+      }      
+    }
+  
+    &.open .custom-select__selected {
+      background: $color-bg-footer;
+      color: $color-text-light;
+      border-color: $color-border-select-open;
+  
+      &:after {
+        width: 12px;
+        height: 12px;
+        transform: translateY(-50%) rotate(180deg); 
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+      }
+    }
+  
+    &__options {
+      list-style: none;
+      display: none;
+      position: absolute;
+      top: 100%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      left: 0;
+      width: 100%;
+      background: $color-bg-dropdown;
+      border: 1px solid $color-border-select-open;
+      border-radius: 6px;
+      max-height: 200px; 
+      overflow-y: auto;
+      z-index: 10;
+      margin: 0;
+      padding: 0;
+      &::-webkit-scrollbar {
+        width: 7px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $color-bg-footer;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $color-scrollbar-thumb; 
+        border-radius: 3px;
+
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        cursor: pointer;
+      }
+    }
+  
+    &.open .custom-select__options {
+      display: block;
+    }
+  
+    &__options li {
+      padding: 8px 10px;
+      margin: 0;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      color: $color-text-light;
+  
+      &:hover {
+        background: $color-bg-dropdown;
+        color: $color-highlight;
+      }
+    }
+
+    @media (max-width: $breakpoint-m){
+      .custom-select__selected{
+        width: 196px;
+        margin: 0 auto;
+      }
+    }
+    @media (max-width: $breakpoint-s) {
+        width: 100%;
+    }
+}

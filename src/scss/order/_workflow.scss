@@ -1,0 +1,76 @@
+@use '../variables' as *;
+@use '../mixins';
+
+.order {
+    &__workflow-diagram{
+        @include mixins.flex-center(row, center, center);
+      min-width: $container-width;
+      gap: 10px;
+      color: $color-text-light;
+      padding-top: 50px;
+      margin: 0;
+      align-items: center;
+    }
+    &__workflow-elem-wrapper{
+        width: 209px;
+        height: 164px;
+        @include mixins.flex-center(column, space-between, center);
+        align-items: center;
+        text-align: center;
+        p{
+          height: 44px;
+        }
+    }
+    &__workflow-elem{
+        border-radius: 50%;
+        background-color: $color-primary;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0 0 0 5px $color-primary-dark;
+    }
+    &__dot{
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: $color-text-light;
+    }
+
+    @media (max-width: $breakpoint-l){
+        .order__workflow-diagram{
+            padding-top: 20px;
+            @include mixins.flex-center(column, center, center);
+            min-width: 200px
+        }
+        .container{
+            @include mixins.flex-center(row, center, flex-start);
+            min-height: 1200px;
+            min-width: 1024px;
+        }
+    }
+    @media (max-width: $breakpoint-m){
+        .container{
+            min-width: 768px;
+        }
+    }
+    @media (max-width: $breakpoint-s){
+        .order__workflow-diagram {
+            flex-direction: column;
+            gap: 30px;
+        }
+        .container{
+            min-width: 578px;
+            min-height: 1100px;
+        }
+    }
+    @media (max-width: $breakpoint-xs){
+        .container{
+            @include mixins.flex-center(column, center, center);
+            min-width: 320px;
+        }
+    }
+
+    
+}

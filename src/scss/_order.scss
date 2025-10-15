@@ -1,0 +1,91 @@
+@use 'variables' as *;
+@use 'mixins';
+@use 'order/workflow';
+@use 'order/form';
+
+.order {
+    position: relative;
+    width: 100%;
+    height: 920px;
+    overflow: hidden;
+    display: flex;
+    background: url("../assets/bg-order-section.svg") top center / cover no-repeat;
+    &__content {
+      position: relative;
+      z-index: 2;
+      margin-top: 121px;
+      width: $container-width;
+      @include mixins.flex-center(column, center, center);
+      align-items: center;
+      gap: 30px;
+    }
+  
+    &__label-wrapper {
+      @include mixins.flex-center(row, flex-start, baseline); 
+      gap: 8px; 
+    }
+  
+    &__label {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0;
+      color: $color-text-light;
+      @include mixins.uppercase-text;
+      &--blue {
+        color: $color-primary;
+      }
+    }
+  
+    &__subtitle{
+      color: $color-text-light;
+      color: $color-text-grey;
+    }
+
+    p{
+        margin: 0;
+    }
+
+  @media (max-width: $breakpoint-l){
+    height: 1050px;
+    .order__content{
+      margin-top: 50px;
+      gap: 0px;
+    }
+  }
+
+  @media (max-width: $breakpoint-m){
+    .order__label, .order__subtitle{
+      text-align: center;
+    }
+    .order__content{
+      padding-left: 5%;
+    }
+    .order__label{
+      font-size: 30px !important;
+    }
+  }
+
+  @media (max-width: $breakpoint-s) {
+    height: auto;
+    padding-bottom: 50px;
+    .order__content {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+    }
+    .order__label{
+      font-size: 24px !important;
+    }
+    .order__subtitle{
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 578px){
+    .order__content{
+      padding: 0;
+      margin: 0;
+      margin-top: 40px;
+    }
+  }
+}

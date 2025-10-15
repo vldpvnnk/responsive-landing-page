@@ -1,0 +1,109 @@
+@use '../variables' as *;
+@use '../mixins';
+@use 'form/custom-select';
+@use 'form/slider';
+
+.order {
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: $container-width;
+      gap: 30px;
+      padding-top: 80px;
+    }
+
+    &__inputs {
+        display: flex;
+        gap: 30px;
+        height: 48px;
+        
+        input {
+          flex: 1;
+          padding: 15px;
+          border: none;
+          border-radius: 3px;
+          font-size: 18px;
+          outline: none;
+          cursor: pointer;
+          transition: background 0.3s;
+          background-color: $color-text-light;
+        }
+      
+    }
+  
+    &__file-label {
+      @include mixins.flex-center;
+      background-color: $color-text-light;
+      color: $color-text-main;
+      border: 1px solid $color-primary;
+      border-radius: 3px;
+      padding: 11px 20px;
+      width: 328px;
+      height: 24px;
+      cursor: pointer;
+      transition: background-color $transition-base;
+      text-transform: uppercase;
+      font-size: 15px;
+      gap: 10px;
+      &:hover {
+        background-color: $color-primary;
+      }
+    }
+        &__submit {
+      @include mixins.button-reset;
+      margin: 0 auto;
+      background-color: $color-primary;
+      color: $color-text-light;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 14px;
+      border-radius: 3px;
+      transition: background-color $transition-base;
+      width: 370px;
+      margin-top: 10px;
+      &:hover {
+        background-color: $color-primary-hover;
+      }
+    }
+
+  @media (max-width: $breakpoint-l){
+    .order__inputs{
+      @include mixins.flex-center(column, center, center);
+      input{
+        width: 340px;
+      }
+    }
+    .order__form{
+      padding-top: 140px;
+    }
+  }
+  @media (max-width: $breakpoint-m){
+    .order__inputs{
+      input{
+        width: 200px;
+        font-size: 16px;
+      }
+    }
+    .order__file-label{
+      width: 188px;
+    }
+
+    .order__submit{
+      width: 230px;
+    }
+  }
+  @media (max-width: $breakpoint-s){
+    .order__form{
+      padding-top: 120px;
+      width: 100%;
+    }
+    .order__inputs {
+        flex-direction: column;
+        gap: 15px;
+        input {
+            width: 200px;
+        }
+    }
+  }
+}
