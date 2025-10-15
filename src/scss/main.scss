@@ -1,0 +1,22 @@
+@use 'variables' as *;
+@use 'mixins';
+@use 'layout';
+@use 'header';
+@use 'hero';
+@use 'order';
+@use 'footer';
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #FFFFFF;
+}
+
+@media (max-width: $breakpoint-l) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}
